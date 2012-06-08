@@ -170,8 +170,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showDish"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        //Dish *dish = [self.appdata.dishes objectAtIndex:indexPath.row];
-        //[segue.destinationViewController performSelector:@selector(setDish:) withObject:dish];
         self.appdata.dishID = indexPath.row;
     } 
 }

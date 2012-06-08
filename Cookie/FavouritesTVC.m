@@ -128,8 +128,7 @@
     if ([segue.identifier isEqualToString:@"showDish"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         Dish *dish = [_favorList objectAtIndex:indexPath.row];
-        [segue.destinationViewController performSelector:@selector(setDish:) withObject:dish];
-        //[segue.destinationViewController setTitle:((UITableViewCell *)sender).textLabel.text];
+        self.appdata.dishID = dish.dishID.intValue;
     } 
 }
 
