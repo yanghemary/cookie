@@ -65,7 +65,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="Cvc-Fk-zJH" kind="push" identifier="showDish" id="yir-zM-ran"/>
+                                    <segue destination="Cvc-Fk-zJH" kind="modal" identifier="showDish" modalTransitionStyle="flipHorizontal" id="yir-zM-ran"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,9 +76,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="5Bb-5O-iDe"/>
                     <navigationItem key="navigationItem" title="Featured" id="e72-gm-nTb">
-                        <barButtonItem key="rightBarButtonItem" image="collectionView.png" id="I0a-Ax-E7S">
+                        <barButtonItem key="rightBarButtonItem" image="collectionView.png" id="Uzt-gd-U2A">
                             <connections>
-                                <segue destination="Cv0-u5-qou" kind="push" identifier="showCollectionView" id="S0k-4e-Leu"/>
+                                <segue destination="Lh3-x1-L2q" kind="modal" modalTransitionStyle="flipHorizontal" id="Vap-iN-vDb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -104,13 +104,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KEH-ET-lxx"/>
+                    <navigationItem key="navigationItem" id="KEH-ET-lxx">
+                        <barButtonItem key="rightBarButtonItem" image="detailView.png" id="1FE-LT-eQ0">
+                            <connections>
+                                <action selector="detailViewSelected:" destination="Cv0-u5-qou" id="90n-mp-Zbx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="3WC-Z7-oH7" id="YtD-lc-ccB"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="170" y="-942"/>
+            <point key="canvasLocation" x="660" y="-1007"/>
         </scene>
         <!--Dish LandscapeVC-->
         <scene sceneID="PXf-wo-Fxb">
@@ -155,7 +162,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="553" y="-697"/>
+            <point key="canvasLocation" x="1079" y="-697"/>
         </scene>
         <!--Dish PortraitVC-->
         <scene sceneID="5YM-qK-WiS">
@@ -163,11 +170,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZc-me-0LK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DishPortraitVC" id="zcs-V2-8N4" customClass="DishPortraitVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tOf-J8-d7a">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" id="f9f-La-jfe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="DQd-zX-Nw6">
@@ -194,7 +201,7 @@
                                         <color key="backgroundColor" red="0.90029514052027837" green="0.95448022959183676" blue="0.74138294420037498" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Txs-Sq-n6N">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="81"/>
+                                        <rect key="frame" x="0.0" y="104" width="320" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="DF8-ig-bp3">
@@ -232,13 +239,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9mR-4u-9bM"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9mR-4u-9bM">
+                        <barButtonItem key="rightBarButtonItem" image="home_30.png" id="GTJ-lA-c4w">
+                            <connections>
+                                <action selector="homePressed:" destination="zcs-V2-8N4" id="CBq-1r-5LC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="favoriteButton" destination="eOb-0R-CNy" id="bbk-Ug-ai2"/>
+                        <outlet property="homeButton" destination="GTJ-lA-c4w" id="mf4-94-PXv"/>
                         <outlet property="imageScrollView" destination="Txs-Sq-n6N" id="fE0-k4-jX1"/>
                         <outlet property="imageView" destination="DF8-ig-bp3" id="N9c-C0-fko"/>
                         <outlet property="intro" destination="X2V-l5-h0z" id="QRb-eb-9eI"/>
@@ -315,7 +330,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="Cvc-Fk-zJH" kind="push" identifier="showDish" id="r09-JX-1ax"/>
+                                    <segue destination="Cvc-Fk-zJH" kind="modal" identifier="showDish" modalTransitionStyle="flipHorizontal" id="r09-JX-1ax"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -337,6 +352,7 @@
                 <navigationController id="Y75-ug-0tp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Featured" image="featured.png" id="snD-43-VEe"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cAY-tp-1qr"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="sec-XR-2wY">
@@ -380,12 +396,16 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="5FS-11-fjt"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="Vfq-nh-TXe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" barStyle="blackOpaque" id="s9n-FT-kzl">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="zcs-V2-8N4" kind="relationship" relationship="rootViewController" id="Ifg-MG-luG"/>
                     </connections>
@@ -393,14 +413,81 @@
             </objects>
             <point key="canvasLocation" x="434" y="-227"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aIp-fB-3l7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2m-hM-kcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="Lh3-x1-L2q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Wa5-KD-w01"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="R3k-lh-ow2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cv0-u5-qou" kind="relationship" relationship="rootViewController" id="bCF-H6-VB0"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="256" y="-1013"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Placeholder.png" width="133" height="100"/>
         <image name="collectionView.png" width="32" height="32"/>
+        <image name="detailView.png" width="32" height="32"/>
         <image name="featured.png" width="32" height="32"/>
         <image name="hand_share_30.png" width="30" height="30"/>
         <image name="heart-gray.png" width="32" height="32"/>
+        <image name="home_30.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="DishLandscapeVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DishLandscapeVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="currentStepLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stepTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="totalStepsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DishPortraitVC" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DishPortraitVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="favoriteButton" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="homeButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="imageScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="intro" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label_ingredients" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="label_procedure" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mainView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="portraitScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="shareButton" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="FavouritesTVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FavouritesTVC.h"/>
+        </class>
+        <class className="FeaturedCollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FeaturedCollectionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="FeaturedTVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FeaturedTVC.h"/>
+        </class>
+        <class className="PickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PickerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

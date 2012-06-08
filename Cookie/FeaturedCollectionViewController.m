@@ -54,8 +54,13 @@
     
 }
 
-// Draw thumbnails
+- (IBAction)detailViewSelected:(UIBarButtonItem *)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
 
+
+
+// Draw thumbnails
 - (void)drawThumbForDish:(Dish *)dish atX:(CGFloat)x atY:(CGFloat)y {
     UIImageView *imageView = [UIImageView new];
     [self.imageViews addObject:imageView];
@@ -209,7 +214,8 @@
     //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:myViewController];
     //now present this navigation controller as modally 
     //[self presentModalViewController:navigationController YES];
-    //[self presentModalViewController:self.dishPortraitVC animated:YES];
+    //self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    self.dishPortraitVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:self.dishPortraitVC animated:YES completion:^{}];
 }
 

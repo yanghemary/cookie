@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *label_procedure;
 @property (weak, nonatomic) IBOutlet UIScrollView *portraitScrollView;
 @property (nonatomic, strong) DishLandscapeVC *landscapeViewController;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *homeButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *shareButton;
 @property (weak, nonatomic) IBOutlet UIImageView *favoriteButton;
@@ -50,6 +51,7 @@
 @synthesize imageView;
 @synthesize titleTextView;
 @synthesize landscapeViewController = _landscapeViewController;
+@synthesize homeButton;
 @synthesize shareButton;
 
 @synthesize intro;
@@ -92,6 +94,9 @@ bool isShowingLandscapeView = false;
     return _appdata;
 }
 
+- (IBAction)homePressed:(UIBarButtonItem *)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 /**************************************************************************
  Setup scroll view and image view when view loaded
@@ -107,8 +112,7 @@ bool isShowingLandscapeView = false;
                    name:UIDeviceOrientationDidChangeNotification
                  object:nil];
     
-    self.landscapeViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
+    self.landscapeViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;    
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
 	self.landscapeViewController = [sb instantiateViewControllerWithIdentifier:@"SBLandscapeViewController"];
@@ -409,6 +413,7 @@ bool isShowingLandscapeView = false;
     [self setFavoriteButton:nil];
     [self setTitleTextView:nil];
     [self setShareButton:nil];
+    [self setHomeButton:nil];
     [super viewDidUnload];
 }
 @end
