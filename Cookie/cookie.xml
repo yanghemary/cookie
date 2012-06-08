@@ -11,16 +11,15 @@
 	</dish>	
     <dish>
 		<dishID>1</dishID>
-		<name>Brownie 'n Berries Dessert Pizza</name>
-		<intro>Want to wow a chocolate-craving crowd? Make a sweet dessert pizza topped with a creamy layer and tart berries.</intro>
-		<category>Appetizer</category>
-		<ingredients>1 lb 2.4 oz,brownie mix;
-            ,Water;,vegetable oil;,egg;8 oz,cream cheese;1/3 cup,sugar;1/2
-            teaspoon,vanilla;2 cups,strawberries;1 cup,blueberries;1 cup,raspberries;1/2 cup,apple jelly</ingredients>
-		<procedure>Heat oven to 350 F .;Grease bottom only of 12-inch pizza pan with cooking spray or shortening.;Make batter as directed on brownie mix box. Spread in pan.;Bake 26 to 30 minutes or until toothpick inserted 2 inches from side of pan comes out almost clean. Cool completely, about 1 hour.;In small bowl, beat cream cheese, sugar and vanilla with electric mixer on medium speed until smooth. Carefully spread mixture evenly over brownie base. Arrange berries over cream cheese mixture. Stir jelly until smooth; brush over berries. Refrigerate about 1 hour or until chilled. Cut into wedges. Store covered in refrigerator.</procedure>
-		<dishURL>http://www.bettycrocker.com/recipes/brownie-n-berries-dessert-pizza/c7d4b6b3-7d76-4387-b2cc-2e72327c45b4</dishURL>
-		<photoURL>http://s3.amazonaws.com/gmi-digital-library/5eee2a79-f8fc-4584-98b4-93a549a9e7c6.jpg</photoURL>
-	</dish>	
+		<name>Frosted Peanut Butter Football Cookies</name>
+		<intro>Game-time sweets? Turn cookies jump-started with a cookie mix into armchair quarter back winners.</intro>
+		<category>Occasion</category>
+		<ingredients>1 pouch,peanut butter cookie mix;Oil;Water;egg;1 container,chocolate frosting;1/4 cup,creamy peanut butter;1 tube, decorating cookie icing</ingredients>
+		<procedure>Make cookie dough as directed on package. Shape dough into 1 1/2–inch balls. Place on ungreased cookie sheets.; Press each ball into ovals, 1/4–inch thick. Bake at 375F 8 to 10 minutes or until light golden brown around edges.;Cool.Place cookies on cooling racks. Cool completely.;In small bowl, stir chocolate frosting and peanut butter until blended.;Spread frosting over cookies; pipe laces with white frosting.</procedure>
+        <dishURL>http://www.bettycrocker.com/recipes/frosted-peanut-butter-football-cookies/09d7ddab-74a9-4950-bdd4-5c3f79a97212</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/e86b0c97-4fd9-43e6-8e24-0db64e022840.jpg</photoURL>
+	</dish>
+   
     
     
     <dish>
@@ -55,36 +54,78 @@
 	</dish>
     <dish>
 		<dishID>5</dishID>
-		<name></name>
-		<intro></intro>
-		<category></category>
-		<ingredients></ingredients>
-		<procedure></procedure>
+		<name>Flower Cupcakes</name>
+		<intro>Celebrate a birthday with easy-to-make cupcakes. A simple snip of a marshmallow makes the decoration.</intro>
+		<category>Cake</category>
+		<ingredients>1 box,white cake mix;,Water;,vegetable oil;,egg whites;1 container,vanilla or creamy white frosting;30,large marshmallows;,Birthday candles</ingredients>
+		<procedure>Heat oven to 350F (325F for dark or nonstick pans).;Make, bake and cool cake mix as directed on box for 24 cupcakes. Frost cupcakes with frosting.;Spray blades of kitchen scissors with cooking spray. Cut each marshmallow crosswise into 4 slices; sprinkle slices with colored sugar.;Arrange 5 slices on each cupcake in flower shape. Place candle in center of each flower. Store loosely covered.</procedure>
 		<dishURL>http://www.bettycrocker.com/recipes/flower-cupcakes/1b8866d7-4fd3-49fc-b418-f7b9c1220bc9</dishURL>
 		<photoURL>http://s3.amazonaws.com/gmi-digital-library/ba05c400-3114-4010-821c-4d6faf3dedff.jpg</photoURL>
 	</dish>
     <dish>
 		<dishID>6</dishID>
-		<name></name>
-		<intro></intro>
-		<category></category>
-		<ingredients></ingredients>
-		<procedure></procedure>
-		<dishURL>http://www.bettycrocker.com/recipes/cupcake-sliders/6603d960-f287-4e3a-b286-cc85f8b31413</dishURL>
-		<photoURL>http://s3.amazonaws.com/gmi-digital-library/ba05c400-3114-4010-821c-4d6faf3dedff.jpg</photoURL>
-	</dish>
-
-    <dish>
-		<dishID>7</dishID>s
-		<name></name>
-		<intro></intro>
-		<category></category>
-		<ingredients></ingredients>
-		<procedure></procedure>
+		<name>Raspberry Frost Sodas</name>
+		<intro>Everyone has fun making cran-raspberry soda--a perfect party pleaser.</intro>
+		<category>Drinks</category>
+		<ingredients>1 bottle,cranberry juice cocktail;2 containers,raspberry sherbet;3 bottles,ginger ale</ingredients>
+		<procedure>Pour 1/4 cup cranberry juice in each of 24 short, wide glasses.;Place 1 scoop (about 1/2 cup) sherbet in each glass. Fill with ginger ale.</procedure>
 		<dishURL>http://www.bettycrocker.com/recipes/raspberry-frost-sodas/8f634f73-ebb9-44a9-a2fd-350bebad94c5</dishURL>
 		<photoURL>http://s3.amazonaws.com/gmi-digital-library/825830a0-227d-4cca-b032-9b34ca41142e.jpg</photoURL>
 	</dish>
-
-
-    </dishes>
+    <dish>
+		<dishID>7</dishID>
+		<name>Sandwich on a Stick</name>
+		<intro>Blogger Paula Jones from Bell'alimento shows us a fun new way to make a sandwich.</intro>
+		<category>Bars</category>
+		<ingredients>1/2 slice,sandwich brea;3 slices,deli meat of choice;3 cubes,cheese of choice;3 pieces, lettuce;3,cherry tomatoes;3,pitted ripe olives;3,mini gherkins</ingredients>
+		<procedure>Onto each of 3 skewers, alternately thread ingredients, beginning and ending with bread cube on each.</procedure>
+        <dishURL>http://www.bettycrocker.com/recipes/sandwich-on-a-stick/e71685a0-0121-4c6b-9867-392d53eb84f7</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/7d661c7c-057a-474b-9984-b85259c5c5c3.jpg</photoURL>
+	</dish>
+    <dish>
+		<dishID>8</dishID>
+		<name>Lemon and Blackberry Crumb Bars</name>
+		<intro>Blogger Bree Hester of Baked Bree makes us a delicious and creamy Lemon and Blackberry Crumb Bar perfect for your spring celebrations.</intro>
+		<category>Fast food</category>
+		<ingredients>1/2 cup,butter;1 cup,packed brown sugar;
+            1 1/3 cups,all-purpose flour;1 can,sweetened condensed milk;1 teaspoon,grated lemon peel;1/2 cup,fresh lemon juice;1 pint,fresh blackberries</ingredients>
+		<procedure>Heat oven to 350F. Lightly spray 13x9-inch pan with cooking spray.;In large bowl, beat butter and brown sugar with spoon until well blended.;Add flour, oats, baking powder and salt.;Stir until mixture is crumbly. Press half of mixture in bottom of pan.;In small bowl, stir together condensed milk, lemon peel and lemon juice.;Pour over crust in pan. Scatter blackberries over lemon mixture. Sprinkle remaining crumb mixture over top.;Bake 20 to 25 minutes or until golden brown. Cool 30 minutes. Refrigerate until completely cooled, about 45 minutes.;For bars, cut into 6 rows by 3 rows. Store in refrigerator.</procedure>
+        <dishURL>http://www.bettycrocker.com/recipes/lemon-and-blackberry-crumb-bars/c0de1879-b870-487a-9445-a026dc9191ff</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/e0c70f8b-eb13-4dc3-bb1e-4d03da2106bf.jpg</photoURL>
+	</dish>
+    <dish>
+		<dishID>9</dishID>
+		<name>White Chocolate Lime Bars</name>
+		<intro>Take a break from dark, heavy chocolate to create a citrus and white chocolate pleaser.</intro>
+		<category>Bars</category>
+		<ingredients>3/4 cup, all-purpose flour;1/4 cup,sugar;1/4 cup,butter or margarine;1/4 cup,finely chopped pecans;1/4 teaspoon,salt</ingredients>
+		<procedure>Heat oven to 350ºF. In medium bowl, mix 3/4 cup flour, 1/4 cup sugar, 1/4 cup butter, the pecans, salt and egg yolk.;Press on bottom and 1/2 inch up sides of ungreased square pan, 9x9x2 inches.Bake about 20 minutes or until golden.;In medium bowl, beat 1 cup sugar, 1 tablespoon flour, the lime peel, lime juice, 3 eggs and the food color with electric mixer on medium speed until slightly thickened.;Pour over baked layer. Bake 25 to 30 minutes or just until no indentation remains when touched lightly in center. Cool completely, about 1 hour.;In 1-quart saucepan, heat baking chips, 2 tablespoons butter and the corn syrup over low heat, stirring constantly, until smooth.;Stir in water until spreadable. Spread cooled bars with glaze.;Refrigerate 30 minutes. For bars, cut into 6 rows by 6 rows. Top each with raspberry. Store covered in refrigerator up to 48 hours.</procedure>
+        <dishURL>http://www.bettycrocker.com/recipes/white-chocolate-lime-bars/152cc6a9-46c6-4df4-9e8d-06e84139599f</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/179e75d8-37bb-4cc8-a3cc-047986cfb8fb.jpg</photoURL>
+	</dish>
+    <dish>
+		<dishID>10</dishID>
+		<name>Brined Whole Turkey</name>
+		<intro>Make your next turkey the most moist and succulent one you've ever tasted!</intro>
+		<category>Meat</category>
+		<ingredients>2 gallons,cold water;2 cups,kosher salt;1,whole turkey;1,medium onion;medium carrot;3 tablespoons,unsalted butter</ingredients>
+		<procedure>Mix cold water and salt in a large clean bucket or stockpot (noncorrosive); stir until salt is dissolved. Add turkey.;Heat oven to 325F. Remove turkey from brine; discard brine.;Fasten neck skin to back of turkey with skewer. Fold wings across back of turkey so tips are touching.;Place turkey, breast side down, on rack in large shallow roasting pan. Brush entire back side of turkey with 1 tablespoon melted butter.;Roast uncovered 3 hours 30 minutes to 4 hours, brushing twice with pan drippings during last 30 minutes of roasting.;Turkey is done when thermometer reads 165°F and drumsticks move easily when lifted or twisted. If a meat thermometer is not used, begin testing for doneness after about 3 hours.</procedure>
+        <dishURL>http://www.bettycrocker.com/recipes/brined-whole-turkey/db56ea6f-f484-439c-9e6d-90bd11d30042</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/762ad1f7-c401-4a4c-814a-a3a2ca01eb81.jpg</photoURL>
+	</dish>
+    <dish>
+		<dishID>11</dishID>
+		<name>Brownie 'n Berries Dessert Pizza</name>
+		<intro>Want to wow a chocolate-craving crowd? Make a sweet dessert pizza topped with a creamy layer and tart berries.</intro>
+		<category>Appetizer</category>
+		<ingredients>1 lb 2.4 oz,brownie mix;
+            ,Water;,vegetable oil;,egg;8 oz,cream cheese;1/3 cup,sugar;1/2
+            teaspoon,vanilla;2 cups,strawberries;1 cup,blueberries;1 cup,raspberries;1/2 cup,apple jelly</ingredients>
+		<procedure>Heat oven to 350 F .;Grease bottom only of 12-inch pizza pan with cooking spray or shortening.;Make batter as directed on brownie mix box. Spread in pan.;Bake 26 to 30 minutes or until toothpick inserted 2 inches from side of pan comes out almost clean. Cool completely, about 1 hour.;In small bowl, beat cream cheese, sugar and vanilla with electric mixer on medium speed until smooth. Carefully spread mixture evenly over brownie base. Arrange berries over cream cheese mixture. Stir jelly until smooth; brush over berries. Refrigerate about 1 hour or until chilled. Cut into wedges. Store covered in refrigerator.</procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/brownie-n-berries-dessert-pizza/c7d4b6b3-7d76-4387-b2cc-2e72327c45b4</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/5eee2a79-f8fc-4584-98b4-93a549a9e7c6.jpg</photoURL>
+	</dish>	
+    
+    
+</dishes>
 
