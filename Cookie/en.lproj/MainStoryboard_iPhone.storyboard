@@ -188,7 +188,7 @@
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hand_share_30.png" id="jxM-j9-vZy">
+                                            <imageView contentMode="scaleToFill" image="hand_share_30.png" id="jxM-j9-vZy">
                                                 <rect key="frame" x="227" y="14" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -253,7 +253,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="favoriteButton" destination="eOb-0R-CNy" id="bbk-Ug-ai2"/>
-                        <outlet property="homeButton" destination="GTJ-lA-c4w" id="mf4-94-PXv"/>
                         <outlet property="imageScrollView" destination="Txs-Sq-n6N" id="fE0-k4-jX1"/>
                         <outlet property="imageView" destination="DF8-ig-bp3" id="N9c-C0-fko"/>
                         <outlet property="intro" destination="X2V-l5-h0z" id="QRb-eb-9eI"/>
@@ -457,7 +456,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DishPortraitVC.h"/>
             <relationships>
                 <relationship kind="outlet" name="favoriteButton" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="homeButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="imageScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="intro" candidateClass="UILabel"/>

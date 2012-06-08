@@ -14,9 +14,10 @@
 #import "DictDataConverter.h"
 #import "DishLandscapeVC.h"
 #import "PickerViewController.h"
+#import <MessageUI/MessageUI.h>
 
+@interface DishPortraitVC () <UIScrollViewDelegate, MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,UIActionSheetDelegate>
 
-@interface DishPortraitVC () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *titleTextView;
@@ -25,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *label_procedure;
 @property (weak, nonatomic) IBOutlet UIScrollView *portraitScrollView;
 @property (nonatomic, strong) DishLandscapeVC *landscapeViewController;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *homeButton;
+@property (nonatomic) UIActionSheet *shareActionSheet;
 
 @property (weak, nonatomic) IBOutlet UIImageView *shareButton;
 @property (weak, nonatomic) IBOutlet UIImageView *favoriteButton;
@@ -42,6 +43,8 @@
 
 @implementation DishPortraitVC 
 
+@synthesize  shareActionSheet = _shareActionSheet;
+
 @synthesize pvController = _pvController;
 
 @synthesize appdata = _appdata;
@@ -51,7 +54,6 @@
 @synthesize imageView;
 @synthesize titleTextView;
 @synthesize landscapeViewController = _landscapeViewController;
-@synthesize homeButton;
 @synthesize shareButton;
 
 @synthesize intro;
@@ -92,8 +94,18 @@ bool isShowingLandscapeView = false;
         _appdata = [AppData getAppDataInstance];
     }
     return _appdata;
+    
+    
 }
 
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    [self dismissModalViewControllerAnimated:YES];
+}
 - (IBAction)homePressed:(UIBarButtonItem *)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -148,7 +160,7 @@ bool isShowingLandscapeView = false;
     
     
     
-    
+    [self initShareButton];
     [self initFavouriteButton];
     
     // Set up introduction label
@@ -219,6 +231,12 @@ bool isShowingLandscapeView = false;
     _currentY = aView.frame.origin.y + aView.frame.size.height;
 }
 
+- (void)initShareButton {
+    UITapGestureRecognizer *shareTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapShare:)];
+
+    [self.shareButton addGestureRecognizer:shareTapGR];
+}
+
 - (void)initFavouriteButton {
     _initialState = _dish.favored;
     UITapGestureRecognizer *favoriteTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFavorite:)];
@@ -227,9 +245,62 @@ bool isShowingLandscapeView = false;
 }
 
 - (void)tapShare: (UITapGestureRecognizer *)gesture {
-    
-
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Share Recipe" delegate:self  cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Share via email",@"Share via SMS",nil];
+    [actionSheet showInView:self.view];
+    _shareActionSheet = actionSheet;
 }
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (actionSheet == _shareActionSheet) {
+        switch (buttonIndex) {
+            case 0:
+                if ([MFMailComposeViewController canSendMail]) {
+                    MFMailComposeViewController *emailSender = [MFMailComposeViewController new];
+                    emailSender.mailComposeDelegate = self;
+                    
+                    
+                    [emailSender setSubject:@"Your friend just shared a recipe with you"];
+                    
+                    NSString *emailText = [@"Hi, your friend just shared a recipe with you. Check it out here: " stringByAppendingFormat:_dish.dishURL];
+                    [emailSender setMessageBody:emailText isHTML:YES];
+                    
+                    NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+                    
+                    [emailSender addAttachmentData:imageData mimeType:@"image/png" fileName:_dish.name];
+                    
+                    [self presentModalViewController:emailSender animated:YES];
+                } else {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to sent email"
+                                                                    message:@"Your device cannot send email for now. Please check."
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"Cancel"
+                                                          otherButtonTitles: nil];
+                    [alert show];
+                }
+                break;
+            case 1:
+                if ([MFMessageComposeViewController canSendText]) {
+                    MFMessageComposeViewController *messageSender = [MFMessageComposeViewController new];
+                    
+                    NSString *messageText = [[NSString stringWithFormat:@"Hi, your friend just shared recipe of %@ with you. Check it out here: ",_dish.name] stringByAppendingFormat:_dish.dishURL];
+                    
+                    [messageSender setBody:messageText];
+                    [self presentModalViewController:messageSender animated:YES];
+                } else {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to sent SMS"
+                                                                    message:@"Your device cannot send SMS for now. Please check."
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"Cancel"
+                                                          otherButtonTitles: nil];
+                    [alert show];
+                }
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 
 - (void)tapFavorite: (UITapGestureRecognizer *)gesture {
 
@@ -413,7 +484,6 @@ bool isShowingLandscapeView = false;
     [self setFavoriteButton:nil];
     [self setTitleTextView:nil];
     [self setShareButton:nil];
-    [self setHomeButton:nil];
     [super viewDidUnload];
 }
 @end
