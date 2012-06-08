@@ -1,0 +1,36 @@
+<doc>
+	<dish>
+		<id>1</id>
+		<name>Raspberry-Lemon Fruit Dip</name>
+		<intro>One great taste with only three ingredients can lighten up offerings for either an appetizer or dessert buffet.</intro>
+		<category>Appetizer</category>
+		<ingrediants>1/2 cup,raspberry reduced-fat cream cheese spread;1/2 cup,marshmallow creme;6 ounces,lemon burst yogurt</ingrediants>
+		<procedure>Mix 1/2 cup raspberry reduced-fat cream cheese spread(from 8-ounce container, softened) and 1/2 cup marshmallow creme in medium bowl with wire whisk until smooth. Stir in 6 ounces lemon burt yogurt.;Serve dip with fruit.</procedure>
+		<url>http://www.bettycrocker.com/recipes/raspberry-lemon-fruit-dip/6276ffe4-33ed-4755-9fdc-4047200b42a0</url>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/4f03bc11-5347-49eb-a5bc-8657357d7bab.jpg</photoURL>
+	</dish>	
+	
+	<dish>
+		<id>2</id>
+		<name>Hot Pretzel Bites</name>
+		<intro>Sarah Caron from Sarah's Cucina Bella shares a favorite appetizer recipe - super easy homemade pretzels. This warm, crusty, buttery, salty bite-size pretzel is perfect for snacking between plays. Serve them up with dipping sauces like honey mustard and salsa con queso.</intro>
+		<category>Appetizer</category>
+		<ingrediants>1 package,dry active yeast;1 1/2 cup,warm water;1 tablespoon,granulated sugar;4 cups,all purpose flour;1/2 teaspoon,salt;1,egg;Coarse salt;1 tablespoon,unsalted butter</ingrediants>
+		<procedure>Preheat oven to 425°F degrees. Line a baking sheet with parchment paper.;In a large bowl, combine the yeast and warm water. Let sit until the yeast dissolves (about 2-3 minutes).;Stir the sugar into the yeast mixture until dissolved.;Add the flour and salt. Stir to combine. The dough will be crumbly. Turn the dough out onto a floured board and knead with floured hands until smooth.;In a small bowl, lightly beat the egg. Set aside.;Divide the dough into 5 portions. Working with one at a time, roll the dough balls out into ropes that are about 1 inch in diameter. Use a sharp knife to cut 1-inch lengths of dough.;Drop each of the dough pieces into the egg mixture and immediately transfer to the prepared baking sheet. Place them about 1/2 inch apart. Sprinkle with coarse salt.;Slide the tray into the oven and bake for 8-10 minutes, until golden brown. Repeat the process until all the dough has been cooked.;Melt the butter and brush all the pretzel bites with butter, then sprinkle with more salt.</procedure>
+		<url>http://www.bettycrocker.com/recipes/hot-pretzel-bites/2690b027-f62d-426c-9777-fb69ec754b66</url>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/8f1320ab-c769-466b-af54-f05886ed56ec.jpg</photoURL>
+	</dish>
+	
+</doc>
+
+<dish>
+	<id></id>
+	<name></name>
+	<intro></intro>
+	<category></category>
+	<ingrediants></ingrediants>
+	<procedure></procedure>
+	<url></url>
+	<photoURL></photoURL>
+</dish>
+

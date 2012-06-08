@@ -1,0 +1,90 @@
+<dishes>
+	<dish>
+		<dishID>0</dishID>
+		<name>Raspberry-Lemon Fruit Dip</name>
+		<intro>One great taste with only three ingredients can lighten up offerings for either an appetizer or dessert buffet.</intro>
+		<category>Appetizer</category>
+		<ingredients>1/2 cup,raspberry cream cheese spread;1/2 cup,marshmallow creme;6 ounces,lemon burst yogurt</ingredients>
+		<procedure>Mix cream cheese spread and marshmallow creme in medium bowl with wire whisk until smooth.;Stir in 6 ounces lemon burt yogurt.;Serve dip with fruit.</procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/raspberry-lemon-fruit-dip/6276ffe4-33ed-4755-9fdc-4047200b42a0</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/4f03bc11-5347-49eb-a5bc-8657357d7bab.jpg</photoURL>
+	</dish>	
+    <dish>
+		<dishID>1</dishID>
+		<name>Brownie 'n Berries Dessert Pizza</name>
+		<intro>Want to wow a chocolate-craving crowd? Make a sweet dessert pizza topped with a creamy layer and tart berries.</intro>
+		<category>Appetizer</category>
+		<ingredients>1 lb 2.4 oz,brownie mix;
+            ,Water;,vegetable oil;,egg;8 oz,cream cheese;1/3 cup,sugar;1/2
+            teaspoon,vanilla;2 cups,strawberries;1 cup,blueberries;1 cup,raspberries;1/2 cup,apple jelly</ingredients>
+		<procedure>Heat oven to 350 F .;Grease bottom only of 12-inch pizza pan with cooking spray or shortening.;Make batter as directed on brownie mix box. Spread in pan.;Bake 26 to 30 minutes or until toothpick inserted 2 inches from side of pan comes out almost clean. Cool completely, about 1 hour.;In small bowl, beat cream cheese, sugar and vanilla with electric mixer on medium speed until smooth. Carefully spread mixture evenly over brownie base. Arrange berries over cream cheese mixture. Stir jelly until smooth; brush over berries. Refrigerate about 1 hour or until chilled. Cut into wedges. Store covered in refrigerator.</procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/brownie-n-berries-dessert-pizza/c7d4b6b3-7d76-4387-b2cc-2e72327c45b4</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/5eee2a79-f8fc-4584-98b4-93a549a9e7c6.jpg</photoURL>
+	</dish>	
+    
+    
+    <dish>
+		<dishID>2</dishID>
+		<name>Christmas Cocoa</name>
+		<intro>A spoonful of marshmallow crème tops steaming homemade cocoa with rich chocolate flavor and a hint of spice.</intro>
+		<category>Occasion</category>
+		<ingredients>1/2 cup,sugar;1/4 cup,unsweetened baking cocoa;1/3 cup,water;1/2 teaspoon,ground cinnamon;1/4 teaspoon,ground nutmeg;4 cups,milk;3/4 cup,marshmallow creme</ingredients>
+		<procedure>In 2-quart saucepan, heat sugar, cocoa, water, cinnamon and nutmeg over low heat, stirring constantly, until mixture is smooth.;Heat to boiling,reduce heat.;Simmer 4 minutes, stirring constantly.;Stir in milk. Heat over low heat. Pour cocoa into 6 mugs.;Top each with 2 tablespoons marshmallow creme.</procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/christmas-cocoa/61e82461-962e-43af-942a-7cd9d2efe104</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/280da828-6da0-4f6c-8ac8-e39e5cf990d8.jpg</photoURL>
+	</dish>	
+    <dish>
+		<dishID>3</dishID>
+		<name>Pineapple Upside-Down Cake</name>
+		<intro>Bake a classic dessert! Buttery rich and caramely pineapple take this yellow cake.</intro>
+		<category>Cake</category>
+		<ingredients>1/4 cup,butter or margarine;2/3 cup, packed brown sugar;9 slices,pineapple in juice;9,maraschino cherries;1 1/3 cups, all-purpose flour;1 cup,granulated sugar;1/3cup shortening;1 ½ teaspoons,baking powder;1/2 teaspoon,salt;3/4cup,milk;1,egg</ingredients>
+		<procedure>Heat oven to 350F. In 9-inch square pan, melt butter in oven.;Sprinkle brown sugar evenly over melted butter. Arrange pineapple slices over brown sugar.;cPlace cherry in center of each pineapple slice.;In medium bowl, beat remaining ingredients with electric mixer on low speed 30 seconds, scraping bowl constantly.;Beat on high speed 3 minutes, scraping bowl occasionally. Pour butter over pineapple and cherries.;Bake 50 to 55 minutes or until toothpick inserted in center comes out clean.;Immediately place heatproof serving plate upside down over pan; turn plate and pan over.</procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/pineapple-upside-down-cake/a1c9a639-0748-4f2c-89f5-fd33cf138986</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/3509af61-7ca0-4d3b-a81c-cf9d62ff7f48.jpg</photoURL>
+	</dish>
+    <dish>
+		<dishID>4</dishID>
+		<name>Pink Champagne Cupcakes</name>
+		<intro>Tiny bubbles. Beautiful cupcakes. Super easy!</intro>
+		<category>Cake</category>
+		<ingredients>1 box, white cake mix;1 1/4 cups,champagne 1/3 cup,vegetable oil;3,egg whites;4 drops,red food color</ingredients>
+		<procedure>Heat oven to 350F. Place paper baking cup in each of 24 regular-size muffin cups.;In large bowl, mix dry cake mix and champagne. Add oil, egg whites and food color.;Beat with electric mixer on medium speed 2 minutes. Divide batter evenly among muffin cups.;Bake 17 to 22 minutes or until toothpick inserted in center comes out clean.;Cool 10 minutes; remove from pan to cooling rack. Cool completely, about 30 minutes.;In medium bowl, beat frosting ingredients with electric mixer on medium speed until smooth.;Frost cupcakes. Sprinkle with garnishes. Store loosely covered.</procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/pink-champagne-cupcakes/26f6f790-0852-4bfc-8f73-8d4cfc8cf496</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/adc5ba00-fe3d-4d0e-ad66-225ab73375d9.jpg</photoURL>
+	</dish>
+    <dish>
+		<dishID>5</dishID>
+		<name></name>
+		<intro></intro>
+		<category></category>
+		<ingredients></ingredients>
+		<procedure></procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/flower-cupcakes/1b8866d7-4fd3-49fc-b418-f7b9c1220bc9</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/ba05c400-3114-4010-821c-4d6faf3dedff.jpg</photoURL>
+	</dish>
+    <dish>
+		<dishID>6</dishID>
+		<name></name>
+		<intro></intro>
+		<category></category>
+		<ingredients></ingredients>
+		<procedure></procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/cupcake-sliders/6603d960-f287-4e3a-b286-cc85f8b31413</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/ba05c400-3114-4010-821c-4d6faf3dedff.jpg</photoURL>
+	</dish>
+
+    <dish>
+		<dishID>7</dishID>s
+		<name></name>
+		<intro></intro>
+		<category></category>
+		<ingredients></ingredients>
+		<procedure></procedure>
+		<dishURL>http://www.bettycrocker.com/recipes/raspberry-frost-sodas/8f634f73-ebb9-44a9-a2fd-350bebad94c5</dishURL>
+		<photoURL>http://s3.amazonaws.com/gmi-digital-library/825830a0-227d-4cca-b032-9b34ca41142e.jpg</photoURL>
+	</dish>
+
+
+    </dishes>
+
