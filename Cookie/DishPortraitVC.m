@@ -13,29 +13,31 @@
 #import "DocManager.h"
 #import "DictDataConverter.h"
 #import "DishLandscapeVC.h"
-#import "PickerViewController.h"
 #import <MessageUI/MessageUI.h>
 
-@interface DishPortraitVC () <UIScrollViewDelegate, MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,UIActionSheetDelegate>
+@interface DishPortraitVC () <UIScrollViewDelegate, MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,UIPrintInteractionControllerDelegate,UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @property (weak, nonatomic) IBOutlet UITextView *titleTextView;
 @property (weak, nonatomic) IBOutlet UILabel *intro;
+
 @property (weak, nonatomic) IBOutlet UILabel *label_ingredients;
 @property (weak, nonatomic) IBOutlet UILabel *label_procedure;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *portraitScrollView;
 @property (nonatomic, strong) DishLandscapeVC *landscapeViewController;
+
 @property (nonatomic) UIActionSheet *shareActionSheet;
 
+@property (weak, nonatomic) IBOutlet UIImageView *printButton;
 @property (weak, nonatomic) IBOutlet UIImageView *shareButton;
 @property (weak, nonatomic) IBOutlet UIImageView *favoriteButton;
 @property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (nonatomic) CGFloat currentY;
 @property (nonatomic) CGFloat defaultWidth;
-@property (nonatomic) PickerViewController *pvController;
 
-@property (nonatomic, weak) Dish *dishDoc;
 @property (nonatomic, weak) NSNumber *initialState;
 @property (nonatomic, strong) UIImage *imageFavored;
 @property (nonatomic, strong) UIImage *imageNotFavored;
@@ -44,8 +46,7 @@
 @implementation DishPortraitVC 
 
 @synthesize  shareActionSheet = _shareActionSheet;
-
-@synthesize pvController = _pvController;
+@synthesize printButton;
 
 @synthesize appdata = _appdata;
 @synthesize imageFavored = _imageFavored;
@@ -55,19 +56,18 @@
 @synthesize titleTextView;
 @synthesize landscapeViewController = _landscapeViewController;
 @synthesize shareButton;
+@synthesize favoriteButton;
+
 
 @synthesize intro;
 @synthesize label_ingredients;
 @synthesize label_procedure;
 @synthesize portraitScrollView;
-@synthesize favoriteButton;
 @synthesize mainView;
 @synthesize dish = _dish;
 @synthesize currentY = _currentY;
 @synthesize defaultWidth = _defaultWidth;
 @synthesize initialState = _initialState;
-
-@synthesize dishDoc;
 
 bool isShowingLandscapeView = false;
 
@@ -136,7 +136,6 @@ bool isShowingLandscapeView = false;
     
     _defaultWidth = PHOTO_WIDTH - 2*DEFAULT_SPACE;
     
-    _pvController = [[PickerViewController alloc] initWithNibName:@"PickerView" bundle:[NSBundle mainBundle]];
 }
 
 
@@ -162,6 +161,7 @@ bool isShowingLandscapeView = false;
     
     [self initShareButton];
     [self initFavouriteButton];
+    [self initPrintButton];
     
     // Set up introduction label
     self.intro.frame = CGRectMake(DEFAULT_SPACE, _currentY-15, _defaultWidth, 100);
@@ -179,7 +179,6 @@ bool isShowingLandscapeView = false;
     
     
     self.portraitScrollView.contentSize = CGSizeMake(self.view.bounds.size.width, _currentY);
-    
     
     dispatch_queue_t loadQueue = dispatch_queue_create("Photo Load Queue", NULL);
     dispatch_async(loadQueue, ^{
@@ -215,7 +214,8 @@ bool isShowingLandscapeView = false;
             //self.imageView.frame = CGRectMake(0, 0, PHOTO_WIDTH, PHOTO_HEIGHT);
             
             //CGFloat zoomScale = PHOTO_WIDTH/image.size.width;
-            self.imageScrollView.contentSize = self.imageView.image.size;
+            // self.imageScrollView.contentSize = self.imageView.image.size;
+            self.imageScrollView.contentSize = self.imageScrollView.frame.size;
             
             self.imageScrollView.minimumZoomScale = 0.5;
             self.imageScrollView.maximumZoomScale = 1.5;
@@ -244,10 +244,32 @@ bool isShowingLandscapeView = false;
     [self updateFavouriteButton];
 }
 
+- (void)initPrintButton {
+    UITapGestureRecognizer *printTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                 action:@selector(tapPrint:)];
+    [self.printButton addGestureRecognizer:printTapGR];
+}
+
 - (void)tapShare: (UITapGestureRecognizer *)gesture {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Share Recipe" delegate:self  cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Share via email",@"Share via SMS",nil];
     [actionSheet showInView:self.view];
     _shareActionSheet = actionSheet;
+}
+
+- (void)tapPrint: (UITapGestureRecognizer *)gesture {
+    if ([UIPrintInteractionController isPrintingAvailable]) {
+        UIPrintInteractionController *printer = [UIPrintInteractionController sharedPrintController];
+        printer.delegate = self;
+        printer.printInfo = [UIPrintInfo printInfo];
+        printer.printInfo.outputType = UIPrintInfoOutputGeneral;
+        printer.printInfo.jobName = @"Cookie dish";
+        printer.printingItem = self.imageView.image;
+        [printer presentAnimated:YES completionHandler:^(UIPrintInteractionController *printInteractionController, BOOL completed, NSError *error) {
+            if (!completed) {
+                NSLog(@"%@", error);
+            }
+        }];
+    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -352,7 +374,7 @@ bool isShowingLandscapeView = false;
     [self updateCurrentY:label_ingredients];
     
     
-    NSDictionary *ingredientsDict = [DictDataConverter decodeDictionary:_dish.ingredients];    
+    NSDictionary *ingredientsDict = [DictDataConverter decodeDictionary:_dish.ingredients];
     
     for (NSString *ingredient in ingredientsDict.allKeys) {
         NSString *amount = [ingredientsDict valueForKey:ingredient];
@@ -435,6 +457,8 @@ bool isShowingLandscapeView = false;
     }
 }
 
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
@@ -484,6 +508,7 @@ bool isShowingLandscapeView = false;
     [self setFavoriteButton:nil];
     [self setTitleTextView:nil];
     [self setShareButton:nil];
+    [self setPrintButton:nil];
     [super viewDidUnload];
 }
 @end

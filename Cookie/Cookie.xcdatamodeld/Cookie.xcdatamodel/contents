@@ -8,17 +8,20 @@
         <attribute name="favored" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="ingredients" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="intro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="myReview" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photoURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="steps" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="totalSteps" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="myIngredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="dishes" inverseEntity="Ingredient" syncable="YES"/>
     </entity>
     <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="numberOfDishes" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="dishes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dish" inverseName="myIngredients" inverseEntity="Dish" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Dish" positionX="169" positionY="372" width="128" height="210"/>
+        <element name="Dish" positionX="169" positionY="372" width="128" height="240"/>
         <element name="Ingredient" positionX="412" positionY="441" width="128" height="75"/>
     </elements>
 </model>
